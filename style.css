@@ -1,0 +1,95 @@
+
+/* EN TÊTE DU SITE */
+header{
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
+  align-items:center;
+
+}
+
+#logo{    /*Logo */
+  width: 20%;
+}
+
+#nouveauT{   /* exemple*/
+  width: 20%;
+}
+
+h1 {       /* Titre "PaFlemme" */
+  width:60%;
+    text-align: center;
+    font-size: 2em;
+    font-family: "Gill Sans", sans-serif;
+    color: #655126; 
+}
+
+
+
+/* MISE EN PAGE DE LA FENÊTRE */
+main {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 0.5fr;  /* 3 colonnes égales */
+    min-height: 100vh;
+    background: radial-gradient(circle at top, #fffdf5, #fcfaf1);
+}
+
+/* Facultatif - pour visualiser les sections/zones de la fenêtre */
+.Section1 { background-color: #e1c8c8; }
+.Section2 { background-color: #d8d7f0; }
+#centre { background-color: #d1ecdd; }
+#droit { background-color: #e2d6c7; }
+
+
+
+/* MISE EN FORME DES IMAGES + MENU DEROULANT */
+.Section1{
+  text-align: center; 
+}
+
+.Section2{
+  text-align: center; 
+}
+
+#enfant {     /* image enfant */
+  width: 30%;
+  height: 20%;
+}
+
+#adult {      /* image adulte */
+  width: 30%;
+  height: 20%;
+}
+
+
+/* MENU DEROULANT */
+select {
+  font-size: 0.9rem;
+  padding: 2px 5px;
+}
+
+
+/* MISE EN FORME DU BOUTON + en bas à droite */
+.boutton-plus {
+  background-color: #4caf9d; /* Couleur de fond (vert) */
+  color: white;             /* Couleur du signe + */
+  border: none;             /* Supprime la bordure par défaut */
+  border-radius: 50%;       /* Rend le bouton parfaitement rond */
+  width: 45px;              /* Largeur du bouton */
+  height: 45px;             /* Hauteur du bouton */
+  font-size: 24px;          /* Taille du signe + */
+  font-weight: bold;        /* Met le signe en gras */
+  display: flex;            /*centre le contenu */
+  align-items: center;      /* Centre verticalement */
+  justify-content: center;  /* Centre horizontalement */
+  cursor: pointer;          /* Change le curseur au survol */
+  position: fixed;    /* Fixe par rapport à la fenêtre d'affichage */
+  bottom: 40px;       /* Marge par rapport au bas */
+  right: 50px;        /* Marge par rapport à la droite */
+}
+
+/* Effet au survol de la souris */
+.boutton-plus:hover {
+  background-color: #45a095; /* Vert un peu plus foncé */
+  transform: scale(1.05);    /* Grossit légèrement le bouton */
+}
