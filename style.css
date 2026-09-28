@@ -1,5 +1,5 @@
 
-/* EN TÊTE DU SITE */
+/* ----------------------- EN TÊTE DU SITE ----------------- */
 header{
   display: flex;
   width: 100%;
@@ -18,15 +18,15 @@ header{
 
 h1 {       /* Titre "PaFlemme" */
   width:60%;
-    text-align: center;
-    font-size: 2em;
-    font-family: "Gill Sans", sans-serif;
-    color: #655126; 
+  text-align: center;
+  font-size: 2em;
+  font-family: "Gill Sans", sans-serif;
+  color: #262012; 
 }
 
 
 
-/* MISE EN PAGE DE LA FENÊTRE */
+/* -------------------- MISE EN PAGE DE LA FENÊTRE ----------------------------------- */
 main {
     display: grid;
     grid-template-columns: 0.5fr 1fr 0.5fr;  /* 3 colonnes égales */
@@ -34,21 +34,24 @@ main {
     background: radial-gradient(circle at top, #fffdf5, #fcfaf1);
 }
 
-/* Facultatif - pour visualiser les sections/zones de la fenêtre */
-.Section1 { background-color: #e1c8c8; }
-.Section2 { background-color: #d8d7f0; }
-#centre { background-color: #d1ecdd; }
-#droit { background-color: #e2d6c7; }
+
+/* -------------------------------- GAUCHE ------------------------------------------ */
+#gauche {
+  padding: 10px;
+}
 
 
-
+/* -------------------------------- HAUT GAUCHE ------------------------------------------ */
 /* MISE EN FORME DES IMAGES + MENU DEROULANT */
 .Section1{
   text-align: center; 
+  font-family: "Gill Sans", sans-serif;
+  background-color: #fcfaf1;
 }
 
 .Section2{
   text-align: center; 
+  font-family: "Gill Sans", sans-serif;
 }
 
 #enfant {     /* image enfant */
@@ -61,14 +64,75 @@ main {
   height: 20%;
 }
 
-
 /* MENU DEROULANT */
 select {
   font-size: 0.9rem;
   padding: 2px 5px;
+  color: #333333;
 }
 
 
+
+/* ------------------------ SEPARATEUR ENTRE LES 2 ZONES ------------------------------------------ */
+.separateur {
+  border: none; /* Supprime le style par défaut du navigateur */
+  height: 1px;  /* Épaisseur de la barre */
+  background-color: #33333398; /* Couleur de la barre */
+  margin: 20px 0; /* Espace au-dessus et en dessous de la barre */
+}
+
+
+
+/* ---------------------------------- BAS GAUCHE ------------------------------------------------------ */
+#BASGAUCHE{
+  font-family: "Gill Sans", sans-serif;
+  text-align: center;
+}
+
+/* ZONE DE TEXTE CARRE */ 
+.zone-texte-rectangle-1 {
+  background-color: #fdfdff;  /* Définit la couleur de fond du rectangle */
+  border: 0.5px solid #acacac;  /* Crée la bordure du rectangle : épaisseur, style (solid = plein) et couleur */
+  padding: 95px;      /* IMPORTANT : Ajoute un espace interne pour que le texte ne colle pas aux bords */
+  border-radius: 7px;   /* Arrondi des bords */
+  max-width: 500px;     /* Limite la largeur maximale du rectangle (optionnel) */
+  margin: 20px auto;        /* Ajoute une marge externe pour espacer le rectangle des autres éléments */
+  color: #333333;     /* Change la couleur du texte */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);    /* Ombre */
+}
+
+
+
+
+/* ------------------------------------ CENTRE ------------------------------------------------------------*/
+#centre {
+  font-family: "Gill Sans", sans-serif;
+  text-align: center;
+  padding: 10px;
+  background-color: #fbf7e7;
+}
+
+/* ZONE DE TEXTE CARRE */ 
+.zone-texte-rectangle-2 {
+  background-color: #fdfdff;  /* Définit la couleur de fond du rectangle */
+  border: 0.5px solid #acacac;  /* Crée la bordure du rectangle : épaisseur, style (solid = plein) et couleur */
+  padding: 10px;      /* IMPORTANT : Ajoute un espace interne pour que le texte ne colle pas aux bords */
+  border-radius: 7px;   /* Arrondi des bords */
+  margin: 20px auto;        /* Ajoute une marge externe pour espacer le rectangle des autres éléments */
+  color: #333333;     /* Change la couleur du texte */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);    /* Ombre */
+}
+
+
+/* ---------------------------------- DROITE ------------------------------------------ */
+
+#droit { 
+  background-color: #e0deda; 
+}
+
+
+
+/* ------------------------------------ BOUTON ------------------------------ */
 /* MISE EN FORME DU BOUTON + en bas à droite */
 .boutton-plus {
   background-color: #4caf9d; /* Couleur de fond (vert) */
@@ -92,4 +156,18 @@ select {
 .boutton-plus:hover {
   background-color: #45a095; /* Vert un peu plus foncé */
   transform: scale(1.05);    /* Grossit légèrement le bouton */
+}
+
+
+
+
+/*------------------------------ MEDIA QUERY -------------------------------------*/
+@media screen and (max-width: 400px) {
+  body {
+    background-color: lightblue;
+  }
+  main{
+    grid-template-columns: auto;
+  }
+
 }
