@@ -8,16 +8,17 @@ header{
 
 }
 
-#logo{    /*Logo */
-  width: 20%;
+#logo-todo {
+  position: absolute;   /* reste collé à la fenêtre, même quand on scrolle */
+  top: 0;
+  left: 0;
+  width: 90;
+  height: 95px;
 }
 
-#nouveauT{   /* exemple*/
-  width: 20%;
-}
 
 h1 {       /* Titre "PaFlemme" */
-  width:60%;
+  width:100%;
   text-align: center;
   font-size: 2em;
   font-family: "Gill Sans", sans-serif;
